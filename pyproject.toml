@@ -1,0 +1,25 @@
+[project]
+name = "openmiir-encoding"
+version = "0.1.0"
+description = "OpenMIIR EEG encoding-model analysis"
+readme = "README.md"
+requires-python = "==3.13.*"
+dependencies = [
+    # --- EEG preprocessing ---
+    "mne>=1.12,<1.13",
+    # --- scientific core ---
+    "numpy",
+    "scipy",
+    "pandas",
+    # --- encoding model (mTRF / regularized regression) ---
+    "mtrf",
+    # --- stimulus modelling (IDyOM wrapper; SBCL needed separately to run models) ---
+    "py2lispIDyOM",
+    "scikit-learn>=1.9.0",
+    "matplotlib>=3.11.0",
+    "openpyxl>=3.1.5",
+]
+
+[tool.uv]
+# No installable package yet (src/ holds analysis scripts, not a distribution).
+package = false
